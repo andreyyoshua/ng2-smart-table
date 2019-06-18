@@ -19,6 +19,7 @@ const FILTER_COMPONENTS = [
   CustomFilterComponent,
   CheckboxFilterComponent,
   CompleterFilterComponent,
+  DateFilterComponent,
   InputFilterComponent,
   SelectFilterComponent,
 ];
