@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/forms'), require('ng2-completer'), require('ng-pick-datetime'), require('rxjs'), require('lodash'), require('rxjs/operators'), require('@angular/common/http')) :
-    typeof define === 'function' && define.amd ? define('ng2-smart-table', ['exports', '@angular/core', '@angular/common', '@angular/forms', 'ng2-completer', 'ng-pick-datetime', 'rxjs', 'lodash', 'rxjs/operators', '@angular/common/http'], factory) :
-    (global = global || self, factory(global['ng2-smart-table'] = {}, global.ng.core, global.ng.common, global.ng.forms, global.ng2Completer, global.ngPickDatetime, global.rxjs, global.lodash, global.rxjs.operators, global.ng.common.http));
+    typeof define === 'function' && define.amd ? define('ng2-smart-table-andreyyoshua', ['exports', '@angular/core', '@angular/common', '@angular/forms', 'ng2-completer', 'ng-pick-datetime', 'rxjs', 'lodash', 'rxjs/operators', '@angular/common/http'], factory) :
+    (global = global || self, factory(global['ng2-smart-table-andreyyoshua'] = {}, global.ng.core, global.ng.common, global.ng.forms, global.ng2Completer, global.ngPickDatetime, global.rxjs, global.lodash, global.rxjs.operators, global.ng.common.http));
 }(this, function (exports, core, common, forms, ng2Completer, ngPickDatetime, rxjs, lodash, operators, http) { 'use strict';
 
     /*! *****************************************************************************
@@ -1300,7 +1300,7 @@
         FilterComponent = __decorate([
             core.Component({
                 selector: 'ng2-smart-table-filter',
-                template: "\n      <div class=\"ng2-smart-filter\" *ngIf=\"column.isFilterable\" [ngSwitch]=\"column.getFilterType()\">\n        <custom-table-filter *ngSwitchCase=\"'custom'\"\n                             [query]=\"query\"\n                             [column]=\"column\"\n                             [source]=\"source\"\n                             [inputClass]=\"inputClass\"\n                             (filter)=\"onFilter($event)\">\n        </custom-table-filter>\n        <default-table-filter *ngSwitchDefault\n                              [query]=\"query\"\n                              [column]=\"column\"\n                              [source]=\"source\"\n                              [inputClass]=\"inputClass\"\n                              (filter)=\"onFilter($event)\">\n        </default-table-filter>\n      </div>\n    ",
+                template: "\n      <div class=\"ng2-smart-filter\" *ngIf=\"column.isFilterable\" [ngSwitch]=\"column.getFilterType()\">\n        <custom-table-filter *ngSwitchCase=\"'custom'\"\n                             [query]=\"query\"\n                             [column]=\"column\"\n                             [source]=\"source\"\n                             [inputClass]=\"inputClass\"\n                             (filter)=\"onFilter($event)\">\n        </custom-table-filter>\n        <date-filter *ngSwitchCase=\"'datepicker'\"\n                         [query]=\"query\"\n                         [ngClass]=\"inputClass\"\n                         [column]=\"column\"\n                         (filter)=\"onFilter($event)\">\n        </date-filter>\n        <default-table-filter *ngSwitchDefault\n                              [query]=\"query\"\n                              [column]=\"column\"\n                              [source]=\"source\"\n                              [inputClass]=\"inputClass\"\n                              (filter)=\"onFilter($event)\">\n        </default-table-filter>\n      </div>\n    ",
                 styles: [":host .ng2-smart-filter ::ng-deep input,:host .ng2-smart-filter ::ng-deep select{width:100%;line-height:normal;padding:.375em .75em;font-weight:400}:host .ng2-smart-filter ::ng-deep input[type=search]{box-sizing:inherit}:host .ng2-smart-filter ::ng-deep .completer-dropdown-holder{font-weight:400}:host .ng2-smart-filter ::ng-deep a{font-weight:400}"]
             })
         ], FilterComponent);
@@ -3174,4 +3174,4 @@
     Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=ng2-smart-table.umd.js.map
+//# sourceMappingURL=ng2-smart-table-andreyyoshua.umd.js.map

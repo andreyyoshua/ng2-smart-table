@@ -60,6 +60,7 @@
             ],
             "styles": [
               "node_modules/highlight.js/styles/dracula.css",
+              "node_modules/ng-pick-datetime/assets/style/picker.min.css",
               "projects/demo/src/app/theme/theme.scss"
             ],
             "scripts": []

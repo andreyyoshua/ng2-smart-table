@@ -87,6 +87,7 @@ export class Ng2SmartTableComponent implements OnChanges {
   isAllSelected: boolean = false;
 
   ngOnChanges(changes: { [propertyName: string]: SimpleChange }) {
+    console.log(changes);
     if (this.grid) {
       if (changes['settings']) {
         this.grid.setSettings(this.prepareSettings());
@@ -135,6 +136,7 @@ export class Ng2SmartTableComponent implements OnChanges {
   }
 
   onSelectAllRows($event: any) {
+    console.log($event);
     this.isAllSelected = !this.isAllSelected;
     this.grid.selectAllRows(this.isAllSelected);
 
@@ -180,6 +182,7 @@ export class Ng2SmartTableComponent implements OnChanges {
   }
 
   filter($event: any) {
+    console.log($event);
     this.resetAllSelector();
   }
 

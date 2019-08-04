@@ -77,7 +77,7 @@ Finally let's put the ng2-smart-table component inside of the template:
 
 @Component({
   template: `
-    <ng2-smart-table [settings]="settings"></ng2-smart-table>
+    <ng2-smart-table-andreyyoshua [settings]="settings"></ng2-smart-table-andreyyoshua>
   `
 })
 // ...
@@ -119,7 +119,7 @@ And pass the data to the table:
 
 @Component({
   template: `
-    <ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>
+    <ng2-smart-table-andreyyoshua [settings]="settings" [source]="data"></ng2-smart-table-andreyyoshua>
   `
 })
 // ...

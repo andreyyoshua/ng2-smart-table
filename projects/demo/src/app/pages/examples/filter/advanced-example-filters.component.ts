@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DateFilterComponent } from '../../../../../../ng2-smart-table/src/lib/components/filter/filter-types/date-filter.component';
 
 @Component({
   selector: 'advanced-example-filters',
@@ -60,6 +61,7 @@ export class AdvancedExampleFiltersComponent {
   ];
 
   settings = {
+    selectMode: 'multi',
     columns: {
       id: {
         title: 'ID',
@@ -102,6 +104,20 @@ export class AdvancedExampleFiltersComponent {
           },
         },
       },
+      date: {
+        title: 'Date',
+        type: 'date',
+        filter: {
+          type: 'datepicker',
+          config: {
+            datepicker: {
+              selectMode: 'range',
+              placeholder: 'Pick date...',
+            },
+          },
+        },
+        filterFunction: DateFilterComponent.filterFunction,
+      }
     },
   };
 }

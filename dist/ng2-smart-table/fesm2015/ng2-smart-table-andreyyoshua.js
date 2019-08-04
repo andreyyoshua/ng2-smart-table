@@ -1286,6 +1286,12 @@ FilterComponent = __decorate([
                              [inputClass]="inputClass"
                              (filter)="onFilter($event)">
         </custom-table-filter>
+        <date-filter *ngSwitchCase="'datepicker'"
+                         [query]="query"
+                         [ngClass]="inputClass"
+                         [column]="column"
+                         (filter)="onFilter($event)">
+        </date-filter>
         <default-table-filter *ngSwitchDefault
                               [query]="query"
                               [column]="column"
@@ -3226,4 +3232,4 @@ class ServerDataSource extends LocalDataSource {
 }
 
 export { Cell, DefaultEditor, DefaultFilter, LocalDataSource, Ng2SmartTableModule, ServerDataSource, CellModule as ɵa, CellComponent as ɵb, PagerComponent as ɵba, TBodyModule as ɵbb, TbodyCreateCancelComponent as ɵbc, TbodyEditDeleteComponent as ɵbd, TbodyCustomComponent as ɵbe, Ng2SmartTableTbodyComponent as ɵbf, THeadModule as ɵbg, ActionsComponent as ɵbh, ActionsTitleComponent as ɵbi, AddButtonComponent as ɵbj, CheckboxSelectAllComponent as ɵbk, ColumnTitleComponent as ɵbl, TitleComponent as ɵbm, TheadFitlersRowComponent as ɵbn, TheadFormRowComponent as ɵbo, TheadTitlesRowComponent as ɵbp, Ng2SmartTableTheadComponent as ɵbq, Ng2SmartTableComponent as ɵbr, Row as ɵbs, DataSet as ɵbt, DataSource as ɵbu, CustomEditComponent as ɵc, EditCellDefault as ɵd, DefaultEditComponent as ɵe, EditCellComponent as ɵf, CheckboxEditorComponent as ɵg, CompleterEditorComponent as ɵh, DatepickerEditorComponent as ɵi, DatepickerRenderComponent as ɵj, InputEditorComponent as ɵk, SelectEditorComponent as ɵl, TextareaEditorComponent as ɵm, CustomViewComponent as ɵn, ViewCellComponent as ɵo, FilterModule as ɵp, FilterComponent as ɵq, FilterDefault as ɵr, DefaultFilterComponent as ɵs, CustomFilterComponent as ɵt, CheckboxFilterComponent as ɵu, CompleterFilterComponent as ɵv, DateFilterComponent as ɵw, InputFilterComponent as ɵx, SelectFilterComponent as ɵy, PagerModule as ɵz };
-//# sourceMappingURL=ng2-smart-table.js.map
+//# sourceMappingURL=ng2-smart-table-andreyyoshua.js.map

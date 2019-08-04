@@ -14,6 +14,12 @@ import { Subscription } from 'rxjs';
                              [inputClass]="inputClass"
                              (filter)="onFilter($event)">
         </custom-table-filter>
+        <date-filter *ngSwitchCase="'datepicker'"
+                         [query]="query"
+                         [ngClass]="inputClass"
+                         [column]="column"
+                         (filter)="onFilter($event)">
+        </date-filter>
         <default-table-filter *ngSwitchDefault
                               [query]="query"
                               [column]="column"

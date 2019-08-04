@@ -9,6 +9,8 @@ import { PagesModule } from './pages/pages.module';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { ScrollPositionDirective } from './theme/directives/scrollPosition.directive';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import { ScrollPositionDirective } from './theme/directives/scrollPosition.direc
     RouterModule.forRoot(routes, { useHash: true }),
     Ng2SmartTableModule,
     PagesModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
